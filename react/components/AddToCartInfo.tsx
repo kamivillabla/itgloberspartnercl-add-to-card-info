@@ -4,46 +4,33 @@ import { useProduct } from 'vtex.product-context'
 import { useOrderForm } from 'vtex.order-manager/OrderForm'
 import { generateBlockClass } from '@vtex/css-handles'
 import style from './style.css'
-/*
-import ProductGroup from './ProductGroup' */
-import Totalizers from './Totalizers'
+
+import ProductGroup from './ProductGroup'
+/* import Totalizers from './Totalizers' */
 import ButtonGroup from './ButtonGroup'
 
 const AddToCartInfo = ({ blockClass }: { blockClass: string }) => {
-  const classes = generateBlockClass(style.container, blockClass)
+  const container = generateBlockClass(style.container, blockClass)
+  const container__total = generateBlockClass(style.container__total, blockClass)
+
   const productInfo = useProduct()
   const { orderForm: {
     items,
     totalizers
   } } = useOrderForm();
-  console.log("este producto tiene esta info:", productInfo)
-  console.log('Estos son mis totales:', totalizers)
+  console.log("Este producto tiene esta informacion:", productInfo)
   return (
-    <div className={classes}>
+    <div className={container}>
       {/* Listado de productp */}
-      {/*    <ProductGroup products={items} /> */}
-      {
-        items.map((item: any, index: number) => {
-          console.log(item);
-          return (
-            <div key={index}>
-              <div>
-                <img src={item.imageUrls.at1x} alt={item.name} />
-              </div>
-              <div>
-                <p>{item.name}</p>
-                <p>{item.id}</p>
-                <p>${item.price / 100}</p>
-                <p>Cant: {item.quantity}</p>
-              </div>
-            </div>
-          )
-        })
-      }
+      <ProductGroup products={items} />
       {/* Valor total */}
-      <Totalizers totalizers={totalizers[0]} />
+      <hr />
+      <div className={container__total}>
+        <p>Tienes {items.length} productos en el carrito</p>
+        <p>Total ${totalizers[0]?.value}</p>
+      </div>
       {/* Manejador de acciones */}
-      <ButtonGroup />
+      <ButtonGroup blockClass={blockClass} />
     </div>
   )
 }

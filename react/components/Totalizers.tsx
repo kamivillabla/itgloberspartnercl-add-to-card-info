@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 
 type Total = {
   id: string
@@ -11,10 +11,11 @@ const Totalizers = (totalizers: Total) => {
   console.log("mis totales son igual a:", id, name, value)
   return (
     <div>
-      <p>Tenemos x items en tu compra</p>
-      <p>Total: x</p>
+      <p>Tienes {item.length} productos en el carrito</p>
+      <p>Total ${totalizers[0]?.value}</p>
     </div>
   )
 }
 
 export default Totalizers
+ */
