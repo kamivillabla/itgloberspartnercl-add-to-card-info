@@ -3,7 +3,7 @@
   "name": "add-to-cart-info",
   "version": "0.0.1",
   "title": "Add to cart info",
-  "description": "Componente que mostrara información al momento de agregar producto al carrito de compras",
+  "description": "component with aditional info to show, when client add a new product to the shopping cart",
   "builders": {
     "react": "3.x",
     "messages": "1.x",
@@ -13,7 +13,7 @@
   "dependencies": {
     "vtex.checkout-resources": "0.x",
     "vtex.order-manager": "0.x",
-    "vteex.product-context": "0.x"
+    "vtex.product-context": "0.x"
   },
   "registries": [
     "smartcheckout"

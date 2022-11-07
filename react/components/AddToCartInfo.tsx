@@ -3,12 +3,14 @@ import React from 'react'
 import { useProduct } from 'vtex.product-context'
 import { useOrderForm } from 'vtex.order-manager/OrderForm'
 import { generateBlockClass } from '@vtex/css-handles'
+import style from './style.css'
 /*
 import ProductGroup from './ProductGroup' */
 import Totalizers from './Totalizers'
 import ButtonGroup from './ButtonGroup'
 
-const AddToCartInfo = () => {
+const AddToCartInfo = ({ blockClass }: { blockClass: string }) => {
+  const classes = generateBlockClass(style.container, blockClass)
   const productInfo = useProduct()
   const { orderForm: {
     items,
@@ -17,7 +19,7 @@ const AddToCartInfo = () => {
   console.log("este producto tiene esta info:", productInfo)
   console.log('Estos son mis totales:', totalizers)
   return (
-    <>
+    <div className={classes}>
       {/* Listado de productp */}
       {/*    <ProductGroup products={items} /> */}
       {
@@ -42,7 +44,7 @@ const AddToCartInfo = () => {
       <Totalizers totalizers={totalizers[0]} />
       {/* Manejador de acciones */}
       <ButtonGroup />
-    </>
+    </div>
   )
 }
 
