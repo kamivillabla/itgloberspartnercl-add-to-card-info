@@ -28,7 +28,6 @@
 }
 
 .button__checkout,
-.button__btn ,
 .button__cart {
  color: black;
  padding:0.8rem;
@@ -40,19 +39,7 @@
 }
 
 .button__checkout:hover,
-.button__btn:hover ,
 .button__cart:hover {
  color: #80c342
 }
 
-.button__btn {
-  background: #80c342;
-  border: 1px solid #80c342;
-  color: white;
-  cursor: pointer;
-}
-.button__btn:hover {
-  background: transparent;
-  border: 1px solid #80c342;
-  color: black;
-}
