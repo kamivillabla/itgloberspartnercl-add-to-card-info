@@ -1,4 +1,4 @@
-# Quick Order
+# add-to-cart-info
 
 Input que permitirá una compra rapida en mi sitio VTEX IO.
 
