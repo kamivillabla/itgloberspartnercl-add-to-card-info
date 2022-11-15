@@ -1,45 +1,62 @@
 .container {
   padding: 10px;
 }
+
 .container__total {
-  padding: 0.5rem;
-  text-align: center;
+  padding         : 0.5rem;
+  text-align      : center;
   background-color: #a7bfa81c;
 }
 
-.container__item  {
-    padding: 1rem;
+.container__item {
+  padding: 1rem;
 }
+
 .container__img {
-    text-align: center;
-    padding: 1rem;
+  text-align: center;
+  padding   : 1rem;
 }
 
 .container__item_info {
-    padding: 1rem;
+  padding: 1rem;
 }
+
 .container__item_info_quantity {
   font-weight: bold;
 }
+
 .container__buttons {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  align-items: center;
+  align-items   : center;
 }
 
 .button__checkout,
 .button__cart {
- color: black;
- padding:0.8rem;
- transition: transform .3s ease;
- -webkit-transition: transform .3s ease;
- -moz-transition: transform .3s ease;
- -ms-transition: transform .3s ease;
- -o-transition: transform .3s ease;
+  color             : black;
+  padding           : 0.8rem;
+  transition        : transform .3s ease;
+  -webkit-transition: transform .3s ease;
+  -moz-transition   : transform .3s ease;
+  -ms-transition    : transform .3s ease;
+  -o-transition     : transform .3s ease;
+}
+
+.button__checkout {
+  text-decoration: underline;
 }
 
 .button__checkout:hover,
 .button__cart:hover {
- color: #80c342
+  color: #80c342
 }
 
+.button__cart {
+  text-align      : center;
+  width           : 100%;
+  text-align      : centr;
+  color           : white;
+  background-color: #80c342;
+  text-decoration : none;
+  margin-top      : 1rem;
+}
